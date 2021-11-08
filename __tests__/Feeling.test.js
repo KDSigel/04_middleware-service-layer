@@ -29,4 +29,14 @@ describe('test Feeling.js queries', () => {
       confusion: 8
     });
   });
+
+  it('should get item by id', async() => {
+    const feeling = await Feeling.getById(1);
+    expect(feeling).toEqual({
+      id: '2',
+      anger: 8,
+      confusion: 8
+    });
+  });
+
 });
