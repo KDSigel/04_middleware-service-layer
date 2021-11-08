@@ -26,8 +26,8 @@ describe('FeelingService tests', () => {
   });
 
   it('should get an item by id', async() => {
-    const feeling = await FeelingService.getById(2);
-    expect(feeling).toEqual({ id: '2', anger: 5, confusion: 5 });
+    const feeling = await FeelingService.getFeelingsById(1);
+    expect(feeling).toEqual({ id: '1', anger: 2, confusion: 2 });
   });
 
 });
