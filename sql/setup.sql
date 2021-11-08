@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS feelings;
+
+CREATE TABLE feelings (
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  anger INTEGER CHECK (anger > 0),
+  confusion INTEGER CHECK (confusion > 0)
+)
