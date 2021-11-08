@@ -18,7 +18,7 @@ describe('test Feeling.js queries', () => {
   });
 
   beforeEach(async() => {
-    await FeelingService.createFeelings(2);
+    await FeelingService.createFeelings(2, 2);
   });
 
   it('creating feelings', async() => {
@@ -33,9 +33,9 @@ describe('test Feeling.js queries', () => {
   it('should get item by id', async() => {
     const feeling = await Feeling.getById(1);
     expect(feeling).toEqual({
-      id: '2',
-      anger: 8,
-      confusion: 8
+      id: '1',
+      anger: 2,
+      confusion: 2
     });
   });
 
